@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\MDI">
+      <UniqueIdentifier>{bf6eabb3-6348-4dba-9cb4-a186b9e30dda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MDI">
+      <UniqueIdentifier>{e1257a4c-ba69-41f4-920d-36b9830e7f29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GL">
+      <UniqueIdentifier>{d3f7b79b-0ce6-4b6f-a3c7-b57f271d7fec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GL">
+      <UniqueIdentifier>{9c5900aa-2c7d-40c2-b17a-0de7b6c4b47b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WOXL">
+      <UniqueIdentifier>{3c08a5bc-39e7-4413-8eff-0cef65b63b81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\WOXL">
+      <UniqueIdentifier>{52241ec8-d6e8-4b33-8c61-fe54cd3fb4eb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="woxl_tool.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="woxl_tool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="binfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MDI.h">
+      <Filter>Header Files\MDI</Filter>
+    </ClInclude>
+    <ClInclude Include="gl.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="gltypes.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="WAD.h">
+      <Filter>Header Files\WOXL</Filter>
+    </ClInclude>
+    <ClInclude Include="CMP.h">
+      <Filter>Header Files\WOXL</Filter>
+    </ClInclude>
+    <ClInclude Include="tim.h">
+      <Filter>Header Files\WOXL</Filter>
+    </ClInclude>
+    <ClInclude Include="vram.h">
+      <Filter>Header Files\WOXL</Filter>
+    </ClInclude>
+    <ClInclude Include="PRM.h">
+      <Filter>Header Files\WOXL</Filter>
+    </ClInclude>
+    <ClInclude Include="endian_tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="woxl_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="binfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MDIProcs.cpp">
+      <Filter>Source Files\MDI</Filter>
+    </ClCompile>
+    <ClCompile Include="MDI.cpp">
+      <Filter>Source Files\MDI</Filter>
+    </ClCompile>
+    <ClCompile Include="gl.cpp">
+      <Filter>Source Files\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="CMP.cpp">
+      <Filter>Source Files\WOXL</Filter>
+    </ClCompile>
+    <ClCompile Include="PRM.cpp">
+      <Filter>Source Files\WOXL</Filter>
+    </ClCompile>
+    <ClCompile Include="TRF.cpp">
+      <Filter>Source Files\WOXL</Filter>
+    </ClCompile>
+    <ClCompile Include="TRS.cpp">
+      <Filter>Source Files\WOXL</Filter>
+    </ClCompile>
+    <ClCompile Include="TRV.cpp">
+      <Filter>Source Files\WOXL</Filter>
+    </ClCompile>
+    <ClCompile Include="WAD.cpp">
+      <Filter>Source Files\WOXL</Filter>
+    </ClCompile>
+    <ClCompile Include="tim.cpp">
+      <Filter>Source Files\WOXL</Filter>
+    </ClCompile>
+    <ClCompile Include="vram.cpp">
+      <Filter>Source Files\WOXL</Filter>
+    </ClCompile>
+    <ClCompile Include="endian_tools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="woxl_tool.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
