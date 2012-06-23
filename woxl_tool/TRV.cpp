@@ -6,7 +6,7 @@ typedef struct {
     long x;
     long y;
     long z;
-    long zero;	// not always zero, when fixing endian this is ignored
+    long unk;	// not always zero, when fixing endian this is ignored
 } trv_vertex_t;
 
 trv_vertex_t *TRV = NULL;
@@ -24,6 +24,7 @@ void TRV_Load(BINFILE *file){
 
 	numverts = filesize>>4;
 	for(int i = 0;i<numverts; i++){
+		// need to swap endian on each of these
 		TRV->x = readDWORD(TRV->x);
 		TRV->y = readDWORD(TRV->y);
 		TRV->z = readDWORD(TRV->z);

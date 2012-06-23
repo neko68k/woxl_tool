@@ -131,6 +131,9 @@
     <ClCompile Include="endian_tools.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="VEW.cpp">
+      <Filter>Source Files\WOXL</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="woxl_tool.rc">

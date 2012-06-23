@@ -110,6 +110,7 @@
     <ClCompile Include="TRF.cpp" />
     <ClCompile Include="TRS.cpp" />
     <ClCompile Include="TRV.cpp" />
+    <ClCompile Include="VEW.cpp" />
     <ClCompile Include="vram.cpp" />
     <ClCompile Include="WAD.cpp" />
     <ClCompile Include="woxl_tool.cpp" />

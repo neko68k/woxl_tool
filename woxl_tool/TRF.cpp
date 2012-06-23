@@ -5,6 +5,6 @@ typedef struct {
 	short unk[4];
     
 
-    BYTE color[3]; 
+    BYTE color[3];	// ?
 	BYTE pad;	// always 0x00
 } trv_face_t;
