@@ -36,6 +36,10 @@ void TRS_Load(BINFILE *file){
 	}
 }
 
+DWORD TRS_GetNumSections(){
+	return numsections;
+}
+
 trs_section_t TRS_GetFace(DWORD i){
 	return(TRS[i]);
 }
