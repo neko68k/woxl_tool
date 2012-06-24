@@ -92,6 +92,7 @@
     <ClInclude Include="tim.h" />
     <ClInclude Include="TRACK.h" />
     <ClInclude Include="TRF.h" />
+    <ClInclude Include="TRS.h" />
     <ClInclude Include="TRV.h" />
     <ClInclude Include="vram.h" />
     <ClInclude Include="WAD.h" />

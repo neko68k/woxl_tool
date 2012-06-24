@@ -12,4 +12,7 @@ typedef struct {
 	BYTE pad;	// always 0x00
 } trf_face_t;
 
+void TRF_Load(BINFILE *file);
+trf_face_t TRF_GetFace(DWORD i);
+
 #endif //__TRF_H__

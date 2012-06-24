@@ -14,8 +14,6 @@ void TRF_Load(BINFILE *file){
 	binseek(file, 0, SEEK_SET);
 
 	TRF = (trf_face_t*)file->base;
-	//binread(TRV, filesize, 1, file);
-	//binclose(file);
 
 	numfaces = filesize/0x20;
 	for(int i = 0;i<numfaces; i++){
@@ -35,6 +33,6 @@ void TRF_Load(BINFILE *file){
 
 }
 
-trf_face_t TRV_GetFace(DWORD i){
+trf_face_t TRF_GetFace(DWORD i){
 	return(TRF[i]);
 }

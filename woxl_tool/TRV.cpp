@@ -14,8 +14,6 @@ void TRV_Load(BINFILE *file){
 	binseek(file, 0, SEEK_SET);
 
 	TRV = (trv_vertex_t*)file->base;
-	//binread(TRV, filesize, 1, file);
-	//binclose(file);
 
 	numverts = filesize>>4;
 	for(int i = 0;i<numverts; i++){
@@ -26,6 +24,6 @@ void TRV_Load(BINFILE *file){
 	}
 }
 
-trv_vertex_t TRV_GetVert(DWORD i){
+trv_vertex_t TRF_GetVert(DWORD i){
 	return(TRV[i]);
 }

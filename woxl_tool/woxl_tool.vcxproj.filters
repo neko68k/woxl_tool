@@ -93,6 +93,9 @@
     <ClInclude Include="TRF.h">
       <Filter>Header Files\WOXL</Filter>
     </ClInclude>
+    <ClInclude Include="TRS.h">
+      <Filter>Header Files\WOXL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
