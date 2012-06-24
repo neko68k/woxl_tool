@@ -6,11 +6,14 @@
 #include"resource.h"
 #include <Shellapi.h>
 #include <CommDlg.h>
+#include <shlobj.h>        //for Shell API
+#include <Shlwapi.h> //for Shell API
 
 #include "MDI.h"
 #include "CMP.h"
 #include "WAD.h"
 #include "PRM.h"
+#include "TRACK.h"
 
 
 #define MAX_LOADSTRING 100
@@ -90,6 +93,43 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 	}
 
 	return (int) msg.wParam;
+}
+
+void OpenTrack()
+{
+       //standard use of the Shell API to browse for folders
+       bool f_selected = false;
+ 
+       char szDir [MAX_PATH];
+       BROWSEINFO bi;        
+       LPITEMIDLIST pidl;        
+       LPMALLOC pMalloc;
+       if (SUCCEEDED (::SHGetMalloc (&pMalloc)))
+       {
+              ::ZeroMemory (&bi,sizeof(bi)); 
+               
+ 
+              bi.lpszTitle = "Choose a Wipeout/Wipeout XL track folder:";
+              bi.hwndOwner = g_hMainWindow;
+              bi.pszDisplayName = 0;           
+              bi.pidlRoot = 0;
+              bi.ulFlags = BIF_RETURNONLYFSDIRS | BIF_STATUSTEXT;
+              bi.lpfn = NULL;      //no customization function
+              bi.lParam = NULL;    //no parameters to the customization function
+ 
+              pidl = ::SHBrowseForFolder(&bi);           
+              if (pidl)
+              {
+                     if (::SHGetPathFromIDList (pidl, szDir))
+                     {
+                           f_selected = true;
+                     }
+                
+                     pMalloc -> Free(pidl);
+                     pMalloc -> Release();
+              }     
+       }
+	TRACK_Load(szDir);       
 }
 
 void OpenFile(){
@@ -245,6 +285,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			break;
 		case ID_FILE_OPEN:
 			OpenFile();
+			break;
+		case ID_FILE_OPENTRACK:
+			OpenTrack();
 			break;
 		default:
 			return DefFrameProc(hWnd, g_hMDIClient, message, wParam, lParam);

@@ -49,7 +49,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions>/D_USE_MATH_DEFINES %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/D_USE_MATH_DEFINES /Zp %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -90,6 +90,9 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="tim.h" />
+    <ClInclude Include="TRACK.h" />
+    <ClInclude Include="TRF.h" />
+    <ClInclude Include="TRV.h" />
     <ClInclude Include="vram.h" />
     <ClInclude Include="WAD.h" />
     <ClInclude Include="woxl_tool.h" />
@@ -107,6 +110,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="tim.cpp" />
+    <ClCompile Include="TRACK.cpp" />
     <ClCompile Include="TRF.cpp" />
     <ClCompile Include="TRS.cpp" />
     <ClCompile Include="TRV.cpp" />

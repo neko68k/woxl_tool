@@ -84,6 +84,15 @@
     <ClInclude Include="endian_tools.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TRACK.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TRV.h">
+      <Filter>Header Files\WOXL</Filter>
+    </ClInclude>
+    <ClInclude Include="TRF.h">
+      <Filter>Header Files\WOXL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -133,6 +142,9 @@
     </ClCompile>
     <ClCompile Include="VEW.cpp">
       <Filter>Source Files\WOXL</Filter>
+    </ClCompile>
+    <ClCompile Include="TRACK.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
