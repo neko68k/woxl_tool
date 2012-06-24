@@ -17,12 +17,12 @@ void TRS_Load(BINFILE *file){
 	numsections = filesize/0x9c;
 	for(int i = 0;i<numsections; i++){
 		// need to swap endian on each of these
-		TRS->previous = readWORD(TRS->previous);
-		TRS->next = readWORD(TRS->next);
-		TRS->unk[0] = readWORD(TRS->unk[0]);
-		TRS->unk[1] = readWORD(TRS->unk[1]);
-		TRS->unk[2] = readWORD(TRS->unk[2]);
-		TRS->unkflag = readWORD(TRS->unkflag);
+		TRS->previous = readDWORD(TRS->previous);
+		TRS->next = readDWORD(TRS->next);
+		TRS->unk[0] = readDWORD(TRS->unk[0]);
+		TRS->unk[1] = readDWORD(TRS->unk[1]);
+		TRS->unk[2] = readDWORD(TRS->unk[2]);
+		TRS->unkflag = readDWORD(TRS->unkflag);
 
 		for(int i = 0;i<15;i++){
 			TRS->unk5[i] = readWORD(TRS->unk5[i]);

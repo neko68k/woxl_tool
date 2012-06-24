@@ -30,9 +30,9 @@ GLvoid ReSizeGLScene(GLsizei width, GLsizei height)		// Resize And Initialize Th
 	ymin = -ymax;
 	xmin = ymin * (GLfloat)width/(GLfloat)height;
 	xmax = ymax * (GLfloat)width/(GLfloat)height;
-	//glFrustum(xmin, xmax, ymin, ymax, 0.1f, 10.0f);
-	glOrtho(0, width, height, 0, -1, 1);
-	//glFrontFace(GL_CW);
+	glFrustum(xmin, xmax, ymin, ymax, 0.1f, 10.0f);
+	//glOrtho(0, width, height, 0, -1, 1);
+	glFrontFace(GL_CW);
 	glMatrixMode(GL_MODELVIEW);							// Select The Modelview Matrix
 	glLoadIdentity();									// Reset The Modelview Matrix
 	//ArcBall.setBounds(width, height);

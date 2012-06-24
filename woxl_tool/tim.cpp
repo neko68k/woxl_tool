@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include <Windows.h>
-#include <stdio.h>
+//#include <Windows.h>
+//#include <stdio.h>
 #include "tim.h"
 #include "vram.h"
 #include "binfile.h"
