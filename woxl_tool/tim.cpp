@@ -32,14 +32,16 @@ void TIM_Load(BINFILE *intim, bool isLibrary){
 
 	//binread(&timHdr2, 4, 1, intim);	
 
-	if(*timHdr2 & 7 == 1){
+	if(((*timHdr2) & 7) == 1){
 		//do 8-bit
+		if(*(WORD*)TIM+536==0&&*(WORD*)TIM+538==0)
+			return;	// cant autoplace 8 bit textures
 	}
 	else{
 		//do 4-bit
-		binread(&palHdr, sizeof(CHK_HDR), 1, intim);
-		//palHdr = (CHK_HDR*)TIM+
-		if(TIM+56==0&&TIM+58==0){		// if img x/y == 0
+		//binread(&palHdr, sizeof(CHK_HDR), 1, intim);
+		// 4-bit autoplace if img x/y == 0
+		if(*(WORD*)TIM+56==0&&*(WORD*)TIM+58==0){		
 			*(WORD*)(TIM+12)=PalAutoX;	// pal x
 			*(WORD*)(TIM+14)=PalAutoY;	// pal y
 			*(WORD*)(TIM+16)=0x10;		// pal w

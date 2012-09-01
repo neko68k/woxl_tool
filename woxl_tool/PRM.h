@@ -11,7 +11,8 @@ typedef struct {
     unsigned short vtx_count; /* Number of vertices */
     unsigned short unknown2[7];
     unsigned short poly_count; /* Number of polygones */
-    unsigned short unknown3[10];
+    unsigned short unknown3[9];
+	unsigned long unknown;
     unsigned short index1;
     unsigned short unknown4[14];
     long position_x; /* Position of object relative to origin */
@@ -28,7 +29,7 @@ typedef struct {
     short x;
     short y;
     short z;
-    short unknown;  
+    short pad;  
 } prm_object_vertex_t;
 
 //Polygons
@@ -50,8 +51,9 @@ typedef struct {
 typedef struct {
 	unsigned short unknown1;
 	unsigned short vertices[3];	/* Vertices index */
-	unsigned short colour_index;
-	unsigned short unknown2[3];
+	unsigned short colour_index;	// this is converted from the stored value to something from the texture table
+	unsigned short unknown2[6];
+	unsigned char  unknown3[6];	
 } prm_object_polygon_2_t;
 
 //Polygon type 0x03
